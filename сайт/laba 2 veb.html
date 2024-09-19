@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Макет сторінки з таблицями</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #555555;
+        }
+        .container {
+            display: grid;
+            grid-template-areas:
+                "photo content1"
+                "content2 content3"
+                "content4 content5";
+            gap: 10px;
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .photo1 {
+            grid-area: photo;
+        }
+        .photo1 img {
+            width: 250px; /* Задаем фиксированную ширину фото */
+            height: auto; /* Высота подстраивается автоматически */
+            border-radius: 0%; /* Закругляем фото */
+            border: 2px solid #090a0f; /* Добавляем рамку */
+        }
+        .content1 {
+            grid-area: content1;
+        }
+        .content2 {
+            grid-area: content2;
+        }
+        .content3 {
+            grid-area: content3;
+        }
+        .content4 {
+            grid-area: content4;
+        }
+        .content5 {
+            grid-area: content5;
+        }
+        /* Стилі для таблиць */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid #000000;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #3cff00;
+            color: white;
+        }
+        td {
+            background-color: #f9f9f9;
+        }
+        .stars {
+            color: gold;
+        }
+        /* Відступи між комірками і всередині таблиць */
+        .skills-table td {
+            padding: 15px;
+        }
+        .experience-table td {
+            padding: 10px 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="photo1"><img src="photo1.jpg" alt="Ваше фото"></div>
+    <div class="content1"><iframe width="500" height="350" src="https://www.youtube.com/embed/n2yxe7WjuUo" title="RUST SOLO/DUO/TRIO" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+    <div class="content2"><iframe width="500" height="250" src="https://www.youtube.com/embed/OTZdJFFK3PY" title="Видос по фану сделан" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+    <div class="content3"><iframe width="500" height="250" src="https://www.youtube.com/embed/6Lt7OasR3Bo" title="[ Down Town ] [ Allred ] [ LSPD &amp; FAM ]" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+    <div class="content4"><iframe width="500" height="250" src="https://www.youtube.com/embed/wDmPgXhlDIg" title="Python — полный курс для начинающих. Этот навык изменит твою жизнь." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+    <div class="content5"><iframe width="500" height="250" src="https://www.youtube.com/embed/InSenLOKtSQ" title="Как выучить HTML &amp; CSS? Самый аху##### способ!" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+</div>
+
+<!-- Досвід роботи -->
+<section style="padding: 20px;">
+    <h2>Досвід роботи</h2>
+    <table class="experience-table">
+        <tr>
+            <th>Позиція</th>
+            <th>Компанія</th>
+            <th>Період</th>
+        </tr>
+        <tr>
+            <td>Stream</td>
+            <td>Канал на ютубе Sn1t</td>
+            <td>2020-2024</td>
+        </tr>
+        <tr>
+            <td>Frontend розробник</td>
+            <td>Компанія NAU</td>
+            <td>2023-2024</td>
+        </tr>
+    </table>
+</section>
+
+<!-- Навички -->
+<section style="padding: 20px;">
+    <h2>Навички</h2>
+    <table class="skills-table">
+        <tr>
+            <th>Навичка</th>
+            <th>Оцінка</th>
+            <th>Навичка</th>
+            <th>Оцінка</th>
+        </tr>
+        <tr>
+            <td>Stream</td>
+            <td><span class="stars">★★★★★</span></td>
+            <td>YouTube</td>
+            <td><span class="stars">★★★★☆</span></td>
+        </tr>
+        <tr>
+            <td>C#</td>
+            <td><span class="stars">★★★★☆</span></td>
+            <td>C++</td>
+            <td><span class="stars">★★★☆☆</span></td>
+        </tr>
+        <tr>
+            <td>Java Script</td>
+            <td><span class="stars">★★★★★</span></td>
+            <td>css</td>
+            <td><span class="stars">★★★★☆</span></td>
+        </tr>
+        <tr>
+            <td>Python</td>
+            <td><span class="stars">★★★★☆</span></td>
+            <td>Django</td>
+            <td><span class="stars">★★★☆☆</span></td>
+        </tr>
+        <tr>
+            <td>SQL</td>
+            <td><span class="stars">★★★☆☆</span></td>
+            <td>Linux</td>
+            <td><span class="stars">★★★☆☆</span></td>
+        </tr>
+    </table>
+</section>
+
+<!-- Форма -->
+<form>
+    <label for="name">Ваше ім'я:</label>
+    <input type="text" id="name" name="name"><br><br>
+    <label for="email">Ваш email:</label>
+    <input type="email" id="email" name="email"><br><br>
+    <label for="message">Ваше повідомлення:</label><br>
+    <textarea id="message" name="message"></textarea><br><br>
+    <input type="submit" value="Отправить">
+</form>
+
+</body>
+</html>
